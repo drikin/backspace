@@ -1,16 +1,12 @@
 ---
-layout: default
-title: backspace.fm
+layout: page
+title: Latest Episodes
+description: "A simple and clean responsive Jekyll theme for words and photos."
+tags: [Jekyll, theme, themes, responsive, blog, minimalism]
 ---
-<p>
-現在工事中です。backspace.fmを試聴するかたは<a href='http://plus.google.com/u/0/b/114237468003036409483/114237468003036409483/'>こちらをクリック</a>してください。
-</p>
 
-<div id="home">
-  <h1>Recent update</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+<ul class="post-list">
+{% for post in site.posts limit:10 %} 
+  <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span></a></article></li>
+{% endfor %}
+</ul>
