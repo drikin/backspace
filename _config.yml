@@ -4,7 +4,7 @@ logo:             site-logo.png
 disqus_shortname: 
 search:           false
 # Change url to your domain. Leave localhost server or blank when working locally.
-url:              http://localhost:4000
+url:              http://backspace.fm
 
 # Owner/author information
 owner:
