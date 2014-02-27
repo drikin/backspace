@@ -34,8 +34,6 @@ bing_verify:
 links:
   - title: Home
     url: /
-  - title: Episodes
-    url: /articles/
   - title: Blog
     url: http://blog.drikin.com
     external: true
