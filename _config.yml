@@ -34,6 +34,9 @@ bing_verify:
 links:
   - title: Home
     url: /
+  - title: YouTube
+    url: https://www.youtube.com/user/backspacefm
+    external: true
   - title: Blog
     url: http://blog.drikin.com
     external: true
