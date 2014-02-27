@@ -1,13 +1,16 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="refresh" content="1;URL=http://plus.google.com/u/0/b/114237468003036409483/114237468003036409483/">
-<script type="text/javascript">
-location.replace('http://plus.google.com/u/0/b/114237468003036409483/114237468003036409483/');
-</script>
-</head>
-<body>
-ページが上手く表示されない場合は<a href='http://plus.google.com/u/0/b/114237468003036409483/114237468003036409483/'>こちらをクリック</a>してください。
-</body>
-</html>
+---
+layout: default
+title: backspace.fm
+---
+<p>
+現在工事中です。backspace.fmを試聴するかたは<a href='http://plus.google.com/u/0/b/114237468003036409483/114237468003036409483/'>こちらをクリック</a>してください。
+</p>
+
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
