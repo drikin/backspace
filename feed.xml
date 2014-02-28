@@ -14,7 +14,7 @@ layout: none
     <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Technology</media:category>
     <itunes:author>{{ site.author }}</itunes:author>
     <itunes:explicit>no</itunes:explicit>
-    <itunes:image href="{{ site.url }}/images/icon1400.jpg" />
+    <itunes:image href="{{ site.url }}/images/icon1200.jpg" />
     <itunes:keywords>{{ site.keywords }}</itunes:keywords>
     <itunes:subtitle>{{ site.tagline }}</itunes:subtitle>
     <itunes:summary>{{ site.description }}</itunes:summary>
