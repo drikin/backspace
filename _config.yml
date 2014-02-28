@@ -1,14 +1,18 @@
 title:            backspace.fm
+tagline:          一週間分のテック・ガジェットニュースを配信するポッドキャスト
 description:      一週間分のテック・ガジェットニュースを配信するポッドキャスト
 logo:             site-logo.png
 disqus_shortname: 
 search:           false
+keywords:         iPhone,iPad,Android,tech,gadget,technology,camera,tablet,internet,Apple,Google,news, San Francisco
+feed:
 # Change url to your domain. Leave localhost server or blank when working locally.
-url:              http://backspace.fm
+#url:              http://backspace.fm
 
 # Owner/author information
+author: Koichi Aoki
 owner:
-  name:           drikin
+  name:           drikin & mazzo
   avatar:         bio-photo.png
   email:          drikin+backspacefm@gmail.com
   # Social networking links used in footer. Update and remove as you like.
@@ -24,7 +28,7 @@ owner:
   google_plus:    https://plus.google.com/+BackspaceFmHome
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   
+google_analytics:   UA-48511878-1
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
