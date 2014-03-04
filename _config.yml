@@ -38,11 +38,11 @@ bing_verify:
 links:
   - title: Home
     url: /
-  - title: YouTube
-    url: https://www.youtube.com/user/backspacefm
-    external: true
   - title: Blog
     url: http://blog.drikin.com
+    external: true
+  - title: iTunes
+    url: https://itunes.apple.com/jp/podcast/backspace.fm/id830709730
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
