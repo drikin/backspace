@@ -37,11 +37,7 @@ layout: none
         <itunes:subtitle>{{ post.excerpt | strip_html }}</itunes:subtitle>
         <itunes:summary>{{ post.excerpt | strip_html }}</itunes:summary>
         <itunes:duration>{{ post.runtime }}</itunes:duration>
-            {% if post.audio_aac %}
-            <enclosure url="{{ post.audio_aac }}" type="audio/mpeg" length="{{ post.size_aac }}" />
-            {% else %}
-            <enclosure url="{{ post.audio }}" type="audio/mpeg" length="{{ post.size }}" />
-            {% endif %}
+        <enclosure url="{{ post.audio }}" type="audio/mpeg" length="{{ post.size }}" />
         {% endif %}
       </item>
     {% endfor %}
