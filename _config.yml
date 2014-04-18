@@ -44,6 +44,9 @@ links:
   - title: iTunes
     url: https://itunes.apple.com/jp/podcast/backspace.fm/id830709730
     external: true
+  - title: Calendar
+    url: https://www.google.com/calendar/embed?src=je3ul6a9tp9esq6efrouf1ht6c%40group.calendar.google.com&ctz=Japan/Tokyo
+    external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Asia/Tokyo
