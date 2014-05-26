@@ -27,3 +27,8 @@ $('#site-nav').click(function(event){
 $(function() {
 	$("article").fitVids();
 });
+
+$(document).ready(function(){
+  // insert _blank for other host links
+  $("a[href^='http']:not([href*='" + window.location.hostname + "'])").attr('target', '_blank');
+});
