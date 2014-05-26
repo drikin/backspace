@@ -26,6 +26,7 @@
 	</div><!-- /.search-form -->
 </div><!-- ./search-wrapper -->{% endif %}
 
+{% if page.layout != 'live' %}
 {% if page.image.feature %}<header class="masthead">
 	{% if site.logo != null %}
 		<div class="wrap">
@@ -42,3 +43,4 @@
 		<h1 class="site-description animated fadeIn" itemprop="description">{{ site.description }}</h2>
 	</div>
 </header><!-- /.masthead -->{% endif %}
+{% endif %}

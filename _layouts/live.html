@@ -1,0 +1,74 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include head.html %}
+
+<style>
+    #left {
+        float: left;
+        width: 640px;
+    }
+    #right {
+        float: right;
+        width: 320px;
+    }
+    #tweet {
+        display: block;
+        height: 87px;
+        width: 600px;
+        padding: 6px;
+        text-align: left;
+        background: #fff;
+        border: 1px #ccc solid;
+        border-radius: 4px;
+    }
+    #tweet a {
+        display: block;
+        width: 590px;
+        height: 80px;
+    }
+    .entry-content {
+        max-width: 960px;
+    }
+</style>
+</head>
+
+<body id="live">
+
+{% include navigation.html %}
+
+<div id="main" role="main">
+  <article class="entry">
+
+
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <h1 class="entry-title">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}</h1>{% endif %}
+      </header>
+        <div id='left'>
+            {{ content }}
+            <p><iframe src="./subscribes.html" width="100%" height="92" scrolling="no" frameborder="0"></iframe><p>
+            <div id='tweet'><a href='https://twitter.com/intent/tweet?hashtags=backspacefm&url=http://backspace.fm/live.html'>#backspacefmでコメントする</div>
+        </div>
+        <div id='right'>
+            <a class="twitter-timeline" href="https://twitter.com/search?q=%23backspacefm" data-widget-id="470704681354674176">#backspacefm に関するツイート</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    {% include footer.html %}
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+{% include scripts.html %}          
+
+</body>
+</html>
