@@ -18,7 +18,17 @@ layout: none
     <itunes:keywords>{{ site.keywords }}</itunes:keywords>
     <itunes:subtitle>{{ site.tagline }}</itunes:subtitle>
     <itunes:summary>{{ site.description }}</itunes:summary>
-    <itunes:category text="Technology"/>
+    <itunes:category text="Technology">
+        <itunes:category text="Gadgets" />
+    </itunes:category>
+    <itunes:category text="News">
+    </itunes:category>
+    <itunes:category text="Arts &amp; Entertainment">
+        <itunes:category text="Entertainment" />
+    </itunes:category>
+    <itunes:category text="International">
+        <itunes:category text="Japanese" />
+    </itunes:category>
     <itunes:owner>
       <itunes:name>{{ site.author }}</itunes:name>
       <itunes:email>{{ site.owner.email }}</itunes:email>
