@@ -41,11 +41,11 @@ layout: none
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         <link>{{ site.url }}{{ post.url }}</link>
         <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
-        <dc:creator>{{ site.author }}</dc:creator
+        <dc:creator>{{ site.author }}</dc:creator>
         {% if post.audio %}
         <itunes:explicit>no</itunes:explicit>
         <itunes:subtitle>{{ post.excerpt | strip_html }}</itunes:subtitle>
-        <itunes:summary>{{ post.excerpt | strip_html }}</itunes:summary>
+        <itunes:summary>{{ post.content | xml_escape }}</itunes:summary>
         <itunes:duration>{{ post.runtime }}</itunes:duration>
             {% if post.audio_aac %}
             <enclosure url="{{ post.audio_aac }}" type="audio/mpeg" length="{{ post.size_aac }}" />
