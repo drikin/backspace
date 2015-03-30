@@ -17,7 +17,6 @@ layout: none
     <itunes:image href="{{ site.url }}/images/icon1200.jpg" />
     <itunes:keywords>{{ site.keywords }}</itunes:keywords>
     <itunes:subtitle>{{ site.tagline }}</itunes:subtitle>
-    <itunes:summary>{{ site.description }}</itunes:summary>
     <itunes:category text="Technology">
         <itunes:category text="Gadgets" />
     </itunes:category>
