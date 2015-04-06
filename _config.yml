@@ -4,7 +4,7 @@ description:      一週間分のテック・ガジェットニュースを配�
 logo:             site-logo.png
 disqus_shortname: 
 search:           false
-keywords:         iPhone,iPad,Android,tech,gadget,technology,camera,tablet,internet,Apple,Google,news, San Francisco
+keywords:         iPhone,iPad,Android,tech,gadget,technology,camera,tablet,internet,Apple,Google,news,San Francisco,ガジェット
 feed:             http://feeds.backspace.fm/backspacefm
 # Change url to your domain. Leave localhost server or blank when working locally.
 url:              http://backspace.fm
