@@ -36,19 +36,23 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: Home
+  - title: Episodes
     url: /
+  - title: Live
+    url: /live.html
   - title: Blog
     url: https://medium.com/backstage-of-backspace
     external: true
-  - title: iTunes
+
+icons:
+  - title: twitter
+    url: https://twitter.com/backspacefm
+  - title: calendar
+    url: https://www.google.com/calendar/render?cid=je3ul6a9tp9esq6efrouf1ht6c@group.calendar.google.com
+  - title: rss
+    url: http://feeds.backspace.fm/backspacefm
+  - title: podcast
     url: https://itunes.apple.com/jp/podcast/backspace.fm/id830709730
-    external: true
-  - title: Calendar
-    url: https://www.google.com/calendar/embed?src=je3ul6a9tp9esq6efrouf1ht6c%40group.calendar.google.com&ctz=Japan/Tokyo
-    external: true
-  - title: Live
-    url: /live.html
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Asia/Tokyo

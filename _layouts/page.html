@@ -1,40 +1,138 @@
 <!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<html>
 <head>
-{% include head.html %}
+  {% include head.html %}
+  <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+  <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+  <link rel="import" href="bower_components/paper-button/paper-button.html">
+  <link rel="import" href="bower_components/paper-card/paper-card.html">
+  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
+  <link rel="import" href="bower_components/paper-styles/color.html">
+  <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+  <style>
+    a:link, a:visited {
+      color: #F9F7F7;
+      text-decoration: none;
+    }
+    body {
+      color: #F9F7F7;
+      background-color: rgba(39,41,43,1);
+    }
+  </style>
+
+  <style is="custom-style">
+    paper-card {
+      width: 100%;
+      margin-bottom: 16px;
+      background-color: #727272;
+      --paper-card-content {
+        font-size: 35px;
+      };
+    }
+    paper-toolbar.tall {
+      background-color: transparent;
+      margin-right: 60px;
+    }
+    paper-toolbar.tall .link{
+      font-size: 20px;
+      margin-left: 10px;
+    }
+    paper-toolbar.tall .title {
+      font-size: 40px;
+      margin-left: 60px;
+      -webkit-transform-origin: left center;
+      transform-origin: left center;
+    }
+
+    .big {
+      margin-left: 10px;
+      --iron-icon-height: 32px;
+      --iron-icon-width: 32px;
+    }
+
+    .episode-list {
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .site-logo {
+      max-width: 270px;
+      width: 100%;
+    }
+
+    .subtitle {
+      font-size: 18px;
+    }
+
+    .content {
+      background-image: url(images/bg_page.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  </style>
 </head>
 
-<body id="page">
+<body class="fullbleed layout vertical" unresolved>
+  <paper-scroll-header-panel class="flex">
+    <paper-toolbar class="tall" bottom-justify="end">
+      <div class="flex"></div>
+      {% for link in site.links %}
+      <div class="link">
+        {% if link.external %}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+        {% else %}
+        <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
+        {% endif %} 
+      </div>
+      {% endfor %}
+      <div class="middle title">
+        <img class="site-logo" src="images/backspace-new-logo.png">
+        <div class="subtitle">一週間分のテック・ガジェット系ニュースを配信するポッドキャスト</div>
+      </div>
+      <div class="bottom">
+        {% for icon in site.icons %}
+        <a href="{{ icon.url }}"><iron-icon class="big" src="images/{{ icon.title }}-icon.png"></iron-icon></a>
+        {% endfor %}
+      </div>
+    </paper-toolbar>
 
-{% include navigation.html %}
+    <div class="content horizontal center-justified layout">
 
-<div id="main" role="main">
-  <article class="entry">
-    {% if page.image.feature %}<img src="{{ site.url }}/images/{{ page.image.feature }}" class="entry-feature-image" alt="{{ page.title }}" {% if site.logo == null %}style="margin-top:0;"{% endif %}>{% if page.image.credit %}<p class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a>{% endif %}{% endif %}
+      <article class="entry">
+        <div class="entry-wrapper">
+          <header class="entry-header">
+            <h1 class="entry-title">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}</h1>{% endif %}
+          </header>
+          <div class="entry-content">
+            <!-- {{ content }} -->
+            <div class="episode-list">
+              {% for post in site.posts limit:1000 %}
+                <paper-card>
+                  <div class="card-header">
+                    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %B %Y" }}</time>
+                  </div>
+                  <div class="card-content">
+                  <a href="{{ site.url }}{{ post.url }}">
+                    {{ post.title }} 
+                  </a>
+                  </div>
+                </paper-card>
+              {% endfor %}
+            </div>
+          </div><!-- /.entry-content -->
+        </div><!-- /.entry-wrapper -->
+      </article>
 
-    <iframe src="./subscribes.html" width="100%" height="92" scrolling="no" frameborder="0"></iframe>
+    </div>
 
-    <div class="entry-wrapper">
-      <header class="entry-header">
-        <h1 class="entry-title">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}</h1>{% endif %}
-      </header>
-      <div class="entry-content">
-        {{ content }}
-      </div><!-- /.entry-content -->
-    </div><!-- /.entry-wrapper -->
-  </article>
-</div><!-- /#main -->
+    <div class="footer-wrapper">
+      <footer role="contentinfo">
+        {% include footer.html %}
+      </footer>
+    </div><!-- /.footer-wrapper -->
 
-<div class="footer-wrapper">
-  <footer role="contentinfo">
-    {% include footer.html %}
-  </footer>
-</div><!-- /.footer-wrapper -->
-
-{% include scripts.html %}          
-
+  </paper-scroll-header-panel>
 </body>
 </html>
