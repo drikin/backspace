@@ -21,13 +21,11 @@ layout: none
     <itunes:category text="Technology">
         <itunes:category text="Gadgets" />
     </itunes:category>
-    <itunes:category text="News">
+    <itunes:category text="News &amp; Politics">
     </itunes:category>
-    <itunes:category text="Arts &amp; Entertainment">
-        <itunes:category text="Entertainment" />
+    <itunes:category text="Arts">
     </itunes:category>
-    <itunes:category text="International">
-        <itunes:category text="Japanese" />
+    <itunes:category text="Games &amp; Hobbies">
     </itunes:category>
     <itunes:owner>
       <itunes:name>{{ site.author }}</itunes:name>
