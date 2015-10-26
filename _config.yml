@@ -51,7 +51,7 @@ links:
     url: /live.html
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Asia/Tokyo
+timezone:    America/Los_Angeles
 future:      true
 pygments:    true
 markdown:    kramdown
