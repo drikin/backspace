@@ -1,5 +1,4 @@
 ---
-layout: none
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/">
@@ -21,13 +20,11 @@ layout: none
     <itunes:category text="Technology">
         <itunes:category text="Gadgets" />
     </itunes:category>
-    <itunes:category text="News">
+    <itunes:category text="News &amp; Politics">
     </itunes:category>
-    <itunes:category text="Arts &amp; Entertainment">
-        <itunes:category text="Entertainment" />
+    <itunes:category text="Arts">
     </itunes:category>
-    <itunes:category text="International">
-        <itunes:category text="Japanese" />
+    <itunes:category text="Games &amp; Hobbies">
     </itunes:category>
     <itunes:owner>
       <itunes:name>{{ site.author }}</itunes:name>
@@ -39,12 +36,17 @@ layout: none
         <title>{{ post.title }}</title>
         <description>{{ post.content | xml_escape }}</description>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>{{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        {% if post.redirect %}
+          <link>{{ post.redirect }}</link>
+          <guid isPermaLink="true">{{ post.redirect }}</guid>
+        {% else %}
+          <link>{{ site.url }}{{ post.url }}</link>
+          <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        {% endif %}
         <dc:creator>{{ site.author }}</dc:creator>
         {% if post.audio %}
         <itunes:explicit>no</itunes:explicit>
-        <itunes:subtitle>{{ post.excerpt | strip_html }}</itunes:subtitle>
+        <itunes:subtitle>{{ post.excerpt | strip_html | truncate: 255 }}</itunes:subtitle>
         <itunes:summary>{{ post.content | xml_escape }}</itunes:summary>
         <itunes:duration>{{ post.runtime }}</itunes:duration>
             {% if post.audio_aac %}

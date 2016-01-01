@@ -12,7 +12,7 @@ url:              http://backspace.fm
 # Owner/author information
 author: Koichi Aoki
 owner:
-  name:           drikin, mazzo and kai
+  name:           drikin, mazzo and yuka
   avatar:         bio-photo.png
   email:          drikin+backspacefm@gmail.com
   # Social networking links used in footer. Update and remove as you like.
@@ -55,27 +55,15 @@ icons:
     url: https://itunes.apple.com/jp/podcast/backspace.fm/id830709730
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Asia/Tokyo
+timezone:    America/Los_Angeles
 future:      true
 highlighter: pygments
-markdown:    kramdown
+markdown:    redcarpet
+safe:        true
+lsi:         false
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title/
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
-
-  coderay:
-    coderay_line_numbers: 
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
