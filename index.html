@@ -8,7 +8,11 @@ tags: [Jekyll, theme, themes, responsive, blog, minimalism]
   {% for post in site.posts limit:1000 %}
   <paper-card heading="{{ post.date | date: "%d %B %Y" }}">
     <div class="card-content">
-      <a href="{{ site.url }}{{ post.url }}">
+      {% if post.redirect %}
+        <a href="{{ post.redirect }}">
+      {% else %}
+        <a href="{{ site.url }}{{ post.url }}">
+      {% endif %}
         <div>{{ post.title }}</div>
         <div class="post_content">{{ post.content | split:"</p>" | first }}</div>
       </a>
