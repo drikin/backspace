@@ -1,12 +1,13 @@
 <!-- Polyfilles for Polymer -->
-<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+<script src="{{ site.url }}/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 
 <meta charset="utf-8">
 <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
 
-{% if site.owner.twitter %}<!-- Twitter Cards -->
+<!-- Twitter Cards -->
+{% if site.owner.twitter %}
 {% if page.image.feature %}<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{{ site.url }}/images/{{ page.image.feature }}">
 {% else %}<meta name="twitter:card" content="summary">
@@ -39,11 +40,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 <!-- For all browsers -->
-<!-- <link rel="stylesheet" href="{{ site.url }}/assets/css/main.min.css"> -->
+<link rel="stylesheet" href="{{ site.url }}/assets/css/main.min.css">
 <!-- Webfonts -->
 <!-- <script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script> -->
 
-<!-- <meta http-equiv="cleartype" content="on"> -->
+<meta http-equiv="cleartype" content="on">
 
 <!-- Load Modernizr -->
 <!-- <script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script> -->

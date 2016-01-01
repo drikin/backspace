@@ -1,16 +1,21 @@
 <!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<html>
 <head>
-{% include head.html %}
-<script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>
+  {% include head.html %}
+  <link rel="import" href="{{ site.url }}/bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+  <link rel="import" href="{{ site.url }}/bower_components/iron-icons/iron-icons.html">
+  <link rel="import" href="{{ site.url }}/bower_components/paper-button/paper-button.html">
+  <link rel="import" href="{{ site.url }}/bower_components/paper-card/paper-card.html">
+  <link rel="import" href="{{ site.url }}/bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="{{ site.url }}/bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
+  <link rel="import" href="{{ site.url }}/bower_components/paper-styles/color.html">
+  <link rel="import" href="{{ site.url }}/bower_components/paper-toolbar/paper-toolbar.html">
+  <script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>
 </head>
 
 <body id="post">
 
-{% include navigation.html %}
+{% include toolbar.html %}
 
 <div id="main" role="main">
   <article class="hentry">
@@ -62,7 +67,7 @@
   </footer>
 </div><!-- /.footer-wrapper -->
 
-{% include scripts.html %}	        
+{% include scripts.html %}
 
 </body>
 </html>

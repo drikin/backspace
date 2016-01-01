@@ -11,6 +11,8 @@
   <link rel="import" href="bower_components/paper-styles/color.html">
   <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
   <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
     a:link, a:visited {
       color: #F9F7F7;
       text-decoration: none;
@@ -18,6 +20,7 @@
     body {
       color: #F9F7F7;
       background-color: rgba(39,41,43,1);
+      font-family: 'Noto Sans Japanese', sans-serif;
     }
   </style>
 
@@ -25,48 +28,63 @@
     paper-card {
       width: 100%;
       margin-bottom: 16px;
-      background-color: #727272;
-      --paper-card-content {
-        font-size: 35px;
+      background-color: rgba(144,144,144,0.5);
+      --paper-card-header: {
+        padding-left: 20px;
+      };
+      --paper-card-header-text: {
+        color: #BBBCBC;
+        font-size: 12px;
+        text-transform: uppercase;
+      };
+      --paper-card-content: {
+        font-size: 22px;
+        padding: 0px 60px 10px 60px;
       };
     }
+    paper-card .post_content {
+      font-size: 16px;
+    }
+
     paper-toolbar.tall {
       background-color: transparent;
       margin-right: 60px;
     }
+    paper-toolbar.tall .middle{
+      top: 18px;
+    }
     paper-toolbar.tall .link{
-      font-size: 20px;
-      margin-left: 10px;
+      font-size: 18px;
+      margin-left: 15px;
     }
     paper-toolbar.tall .title {
-      font-size: 40px;
+      font-size: 16px;
       margin-left: 60px;
-      -webkit-transform-origin: left center;
-      transform-origin: left center;
     }
 
-    .big {
+    .icons {
       margin-left: 10px;
-      --iron-icon-height: 32px;
-      --iron-icon-width: 32px;
     }
 
     .episode-list {
-      max-width: 1100px;
+      max-width: 900px;
       margin-left: auto;
       margin-right: auto;
+      margin-top: 40px;
     }
 
     .site-logo {
-      max-width: 270px;
+      max-width: 250px;
       width: 100%;
     }
 
     .subtitle {
-      font-size: 18px;
+      margin-top: -10px;
+      font-size: 14px;
     }
 
     .content {
+      background-attachment: fixed;
       background-image: url(images/bg_page.jpg);
       background-size: 100%;
       background-repeat: no-repeat;
@@ -75,59 +93,14 @@
 </head>
 
 <body class="fullbleed layout vertical" unresolved>
-  <paper-scroll-header-panel class="flex">
-    <paper-toolbar class="tall" bottom-justify="end">
-      <div class="flex"></div>
-      {% for link in site.links %}
-      <div class="link">
-        {% if link.external %}
-        <a href="{{ link.url }}">{{ link.title }}</a>
-        {% else %}
-        <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
-        {% endif %} 
-      </div>
-      {% endfor %}
-      <div class="middle title">
-        <img class="site-logo" src="images/backspace-new-logo.png">
-        <div class="subtitle">一週間分のテック・ガジェット系ニュースを配信するポッドキャスト</div>
-      </div>
-      <div class="bottom">
-        {% for icon in site.icons %}
-        <a href="{{ icon.url }}"><iron-icon class="big" src="images/{{ icon.title }}-icon.png"></iron-icon></a>
-        {% endfor %}
-      </div>
-    </paper-toolbar>
+  <paper-scroll-header-panel class="flex" condenses fixed>
+    {% include toolbar.html %}
 
     <div class="content horizontal center-justified layout">
-
-      <article class="entry">
-        <div class="entry-wrapper">
-          <header class="entry-header">
-            <h1 class="entry-title">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}</h1>{% endif %}
-          </header>
-          <div class="entry-content">
-            <!-- {{ content }} -->
-            <div class="episode-list">
-              {% for post in site.posts limit:1000 %}
-                <paper-card>
-                  <div class="card-header">
-                    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %B %Y" }}</time>
-                  </div>
-                  <div class="card-content">
-                  <a href="{{ site.url }}{{ post.url }}">
-                    {{ post.title }} 
-                  </a>
-                  </div>
-                </paper-card>
-              {% endfor %}
-            </div>
-          </div><!-- /.entry-content -->
-        </div><!-- /.entry-wrapper -->
-      </article>
-
+      {{ content }}
     </div>
 
-    <div class="footer-wrapper">
+    <div class="footer-wrapper layout horizontal center-justified">
       <footer role="contentinfo">
         {% include footer.html %}
       </footer>

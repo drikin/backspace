@@ -1,0 +1,21 @@
+<paper-toolbar class="tall" bottom-justify="end">
+  <div class="flex"></div>
+  {% for link in site.links %}
+  <div class="link">
+    {% if link.external %}
+    <a href="{{ link.url }}">{{ link.title }}</a>
+    {% else %}
+    <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
+    {% endif %} 
+  </div>
+  {% endfor %}
+  <div class="middle title">
+    <img class="site-logo" src="{{ site.url }}/images/backspace-new-logo.png">
+    <div class="subtitle">一週間分のテック・ガジェット系ニュースを配信するポッドキャスト</div>
+  </div>
+  <div class="bottom">
+    {% for icon in site.icons %}
+    <a href="{{ icon.url }}"><iron-icon class="icons" src="{{ site.url }}/images/{{ icon.title }}-icon.png"></iron-icon></a>
+    {% endfor %}
+  </div>
+</paper-toolbar>

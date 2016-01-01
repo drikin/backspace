@@ -3,7 +3,6 @@
 /* Common
 /*
 /*****************************************************************************/
-
 /* Global Reset */
 * {
   margin: 0;
@@ -13,10 +12,9 @@
 html, body { height: 100%; }
 
 body {
-  background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
-  font-size: small;
-  text-align: center;
+  color: #F9F7F7;
+  background-color: rgba(39,41,43,1);
+  font-family: 'Noto Sans Japanese', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,29 +23,23 @@ h1, h2, h3, h4, h5, h6 {
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
+a         { color: #F9F7F7; }
+a:hover   { color: #F9F7F7; }
+a:visited { color: #F9F7F7; }
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+
 
 /*****************************************************************************/
 /*
 /* Home
 /*
 /*****************************************************************************/
-.posts {
-  list-style-type: none;
-  margin-bottom: 2em;
-}
-
-.posts li {
-  line-height: 1.75em;
-}
-
-.posts span {
-  color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
-}
 
 /*****************************************************************************/
 /*
@@ -55,106 +47,74 @@ a:visited { color: #a0a; }
 /*
 /*****************************************************************************/
 
-.site {
-  font-size: 115%;
-  text-align: justify;
-  width: 42em;
-  margin: 3em auto 2em;
-  line-height: 1.5em;
-}
-
-.header a {
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.title {
-  display: inline-block;
-  margin-bottom: 2em;
-}
-
-.title a {
-  color: #a00;
-}
-
-.title a:hover {
-  color: #000;
-}
-
-.header a.extra {
-  color: #aaa;
-  margin-left: 1em;
-}
-
-.header a.extra:hover {
-  color: #000;
-}
-
-.meta {
-  color: #aaa;
-}
-
-.footer {
-  font-size: 80%;
-  color: #666;
-  border-top: 4px solid #eee;
-  margin-top: 2em;
-  overflow: hidden;
-}
-
-.footer .contact {
-  float: left;
-  margin-right: 3em;
-}
-
-.footer .contact a {
-  color: #8085C1;
-}
-
-.footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
-}
-
-.footer .rss img {
-  border: 0;
-}
 
 /*****************************************************************************/
 /*
-/* Posts
+/* Pages
 /*
 /*****************************************************************************/
 
-/* standard */
-.post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
+paper-card {
+  width: 100%;
+  margin-bottom: 16px;
+  background-color: rgba(144,144,144,0.5);
+  --paper-card-header: {
+    padding-left: 20px;
+  };
+  --paper-card-header-text: {
+    color: #BBBCBC;
+    font-size: 12px;
+    text-transform: uppercase;
+  };
+  --paper-card-content: {
+    font-size: 22px;
+    padding: 0px 60px 10px 60px;
+  };
+}
+paper-card .post_content {
+  font-size: 16px;
 }
 
-.post ul, .post ol {
-  margin-left: 1.35em;
+paper-toolbar.tall {
+  background-color: transparent;
+  margin-right: 60px;
+}
+paper-toolbar.tall .middle{
+  top: 18px;
+}
+paper-toolbar.tall .link{
+  font-size: 18px;
+  margin-left: 15px;
+}
+paper-toolbar.tall .title {
+  font-size: 16px;
+  margin-left: 60px;
 }
 
-.post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em;
+.icons {
+  margin-left: 10px;
 }
 
-.post pre code {
-  border: none;
+.episode-list {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
 }
 
-/* terminal */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF;
+.site-logo {
+  max-width: 250px;
+  width: 100%;
 }
 
-.post pre.terminal code {
-  background-color: #333;
+.subtitle {
+  margin-top: -10px;
+  font-size: 14px;
+}
+
+.content {
+  background-attachment: fixed;
+  background-image: url(images/bg_page.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
