@@ -54,7 +54,7 @@ links:
 timezone:    America/Los_Angeles
 future:      true
 highlighter: pygments
-markdown:    redcarpet
+markdown:    kramdown
 safe:        true
 lsi:         false
 
