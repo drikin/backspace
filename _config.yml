@@ -48,13 +48,13 @@ links:
     url: https://www.google.com/calendar/embed?src=je3ul6a9tp9esq6efrouf1ht6c%40group.calendar.google.com&ctz=Japan/Tokyo
     external: true
   - title: Live
-    url: /live.html
+    url: /live/
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Los_Angeles
 future:      true
 highlighter: rouge
-markdown:    kramdown
+markdown:    redcarpet
 safe:        true
 lsi:         false
 
