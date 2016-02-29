@@ -34,7 +34,12 @@
     {% for post in site.posts %}
       <item>
         <title>{{ post.title }}</title>
-        <description>{{ post.content | xml_escape }}</description>
+        <description>
+          {{ post.content | xml_escape }}&lt;hr&gt;&lt;p&gt;
+          &#12371;&#12398;&#12506;&#12540;&#12472;&#12434;Web&#12502;&#12521;&#12454;&#12470;&#12391;&#35211;&#12427;&lt;br&gt;
+          &lt;a href=&quot;{{ site.url }}{{ post.url }}&quot;&gt;{{ site.url }}{{ post.url }}&lt;/a&gt;
+          &lt;/p&gt;
+        </description>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         {% if post.redirect %}
           <link>{{ post.redirect }}</link>
