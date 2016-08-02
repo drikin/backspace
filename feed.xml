@@ -35,7 +35,7 @@
       <item>
         <title>{{ post.title }}</title>
         <description>
-          このページをウェブブラウザで見る→&lt;a href="{{ site.url }}{{ post.url }}"&gt;リンク&lt;/a&gt;&lt;br&gt;{{ post.content | xml_escape }}
+          このページをウェブブラウザで見る→&lt;a href=&quot;{{ site.url }}{{ post.url }}&quot;&gt;リンク&lt;/a&gt;&lt;br&gt;&lt;hr&gt;{{ post.content | xml_escape }}
         </description>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         {% if post.redirect %}
@@ -50,7 +50,7 @@
         <itunes:explicit>no</itunes:explicit>
         <itunes:subtitle>{{ post.excerpt | strip_html | truncate: 255 }}</itunes:subtitle>
         <itunes:summary>
-          このページをウェブブラウザで見る→&lt;a href="{{ site.url }}{{ post.url }}"&gt;リンク&lt;/a&gt;&lt;br&gt;{{ post.content | xml_escape }}
+          このページをウェブブラウザで見る→&lt;a href=&quot;{{ site.url }}{{ post.url }}&quot;&gt;リンク&lt;/a&gt;&lt;br&gt;&lt;hr&gt;{{ post.content | xml_escape }}
         </itunes:summary>
         <itunes:duration>{{ post.runtime }}</itunes:duration>
             {% if post.audio_aac %}
