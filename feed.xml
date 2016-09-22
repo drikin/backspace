@@ -35,6 +35,7 @@
       <item>
         <title>{{ post.title }}</title>
         <description>
+          &lt;p&gt;このページをウェブブラウザで見る: &lt;a href=&quot;{{ site.url }}{{ post.url }}&quot;&gt;リンク&lt;/a&gt;&lt;br&gt;&lt;hr&gt;&lt;/p&gt;
           {{ post.content | xml_escape }}
         </description>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
