@@ -49,9 +49,6 @@
         {% if post.audio %}
         <itunes:explicit>no</itunes:explicit>
         <itunes:subtitle>{{ post.excerpt | strip_html | truncate: 255 }}</itunes:subtitle>
-        <itunes:summary>
-          このページをウェブブラウザで見る→&lt;a href=&quot;{{ site.url }}{{ post.url }}&quot;&gt;リンク&lt;/a&gt;&lt;br&gt;&lt;hr&gt;{{ post.content | xml_escape }}
-        </itunes:summary>
         <itunes:duration>{{ post.runtime }}</itunes:duration>
             {% if post.audio_aac %}
             <enclosure url="{{ post.audio_aac }}" type="audio/mpeg" length="{{ post.size_aac }}" />
