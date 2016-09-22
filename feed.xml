@@ -38,6 +38,10 @@
           &lt;p&gt;このページをウェブブラウザで見る: &lt;a href=&quot;{{ site.url }}{{ post.url }}&quot;&gt;リンク&lt;/a&gt;&lt;br&gt;&lt;hr&gt;&lt;/p&gt;
           {{ post.content | xml_escape }}
         </description>
+        <itunes:summary>
+          &lt;p&gt;このページをウェブブラウザで見る: &lt;a href=&quot;{{ site.url }}{{ post.url }}&quot;&gt;リンク&lt;/a&gt;&lt;br&gt;&lt;hr&gt;&lt;/p&gt;
+          {{ post.content | xml_escape }}
+        </itunes:summary>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         {% if post.redirect %}
           <link>{{ post.redirect }}</link>
