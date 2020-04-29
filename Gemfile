@@ -8,3 +8,5 @@ gem 'rake'
 gem 'thor'
 gem 'activesupport'
 gem 'stringex'
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
