@@ -12,16 +12,10 @@ assignees: ''
 # ✔︎指差し確認　
 
 - [ ] 音声チェック
-- [ ] riverside・banana録音スタート
+- [ ] riverside録音スタート
 - [ ] YouTubeストリームが正しいことを確認
-- [ ] OBS・YTライブ・Twitch開始
-- [ ] パン （始まり）
-- [ ] パン （終わり）
-- [ ] riverisde・banana・YTライブ停止
-- [ ] Twitch連携切断
-- [ ] アフターショー用のbanana録音
-- [ ] #1255
-
+- [ ] YTライブ開始
+- [ ] YTライブ停止
 
 # 今週の台本
 
